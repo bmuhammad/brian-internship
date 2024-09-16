@@ -3,8 +3,12 @@ import AuthorBanner from "../images/author_banner.jpg";
 import AuthorItems from "../components/author/AuthorItems";
 import { Link } from "react-router-dom";
 import AuthorImage from "../images/author_thumbnail.jpg";
+import { useParams } from 'react-router-dom';
 
-const Author = () => {
+const Author = (props) => {
+
+console.log("props", props)
+
   return (
     <div id="wrapper">
       <div className="no-bottom no-top" id="content">
