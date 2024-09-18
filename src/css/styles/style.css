@@ -13298,6 +13298,8 @@ a.read_more i {
   z-index: 10;
 }
 
+
+
 .author_list_pp img {
   width: 100%;
   border-radius: 100% !important;
@@ -13305,7 +13307,20 @@ a.read_more i {
   -webkit-border-radius: 100% !important;
   position: relative;
   z-index: 1;
+  background-color: lightgray;
 }
+
+#authorImage {
+  /* background-color: lightgray;
+  color: lightgray;
+  background: lightgray; */
+
+ align-items: stretch;
+
+  
+
+}
+
 
 .author_list_pp a:hover img {
   padding: 4px;
@@ -13323,8 +13338,6 @@ a.read_more i {
   -webkit-border-radius: 100%;
   z-index: 2;
 }
-
-
 
 .de-pp-group a {
   position: absolute;
@@ -13348,6 +13361,23 @@ a.read_more i {
   font-weight: bold;
   padding-left: 70px;
 }
+
+.author_list_name--skeleton {
+  background-color: lightgray;
+  color: lightgray;
+  height: 20px;
+  margin: 5px 70px 5px 0;
+}
+
+.author_list_price--skeleton {
+ 
+  height: 20px;
+   margin-right: 140px;
+   background: lightgray;
+ }
+ 
+
+
 
 .rtl .author_list_info {
   padding-left: 0;
@@ -15225,7 +15255,7 @@ a.btn-slider:hover {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .testi-slider .flex-control-paging li a {
@@ -16852,38 +16882,6 @@ img {
   background: var(--secondary-color);
 }
 
-.author_list_pp--skeleton {
-  width: 60px;
-  display: block;
-  margin: 0 auto;
-  margin-top: -30px;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.author_list_pp--skeleton img {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-
-  background-color: lightgray;
-}
-
-.author_list_pp--skeleton i {
-  font-size: 10px;
-  color: #ffffff;
-  background: #333;
-  border-radius: 100%;
-  -moz-border-radius: 100%;
-  -webkit-border-radius: 100%;
-  padding: 3px;
-  position: absolute;
-  bottom: 4px;
-  right: 5px;
-  background-color: lightgray;
-}
 
 .nft_coll_info--skeleton h4 {
   background-color: lightgray;
