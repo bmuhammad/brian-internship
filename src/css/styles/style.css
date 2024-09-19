@@ -16945,3 +16945,7 @@ img {
   margin-right: 35px;
   z-index: 1;
 }
+
+#exploreSkeleton {
+  background-color: lightgray;
+}
