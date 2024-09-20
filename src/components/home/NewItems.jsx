@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
@@ -9,6 +9,9 @@ import NFTExpiration from "./NFTExpiration";
 const NewItems = () => {
   const [newItems, setNewItems] = useState([]);
   const [loading, setLoading] = useState();
+
+
+  
   const options = {
     responsive: {
       0: {
@@ -43,7 +46,8 @@ const NewItems = () => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems`
       );
-
+console.log("expire" , data)
+    
       setNewItems(data);
       setLoading(false);
     };
@@ -109,8 +113,10 @@ const NewItems = () => {
                 >
                   <div className="nft__item">
                     <div className="author_list_pp">
+                      
                       <Link
-                        to={`/author/${newItem.authorId}`}
+                      to={{ pathname: `/author/${newItem.authorId}`, state: newItem.authorId}}
+                     
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         title="Creator: Monica Lucas"
