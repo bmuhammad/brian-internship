@@ -46,8 +46,7 @@ const NewItems = () => {
       const { data } = await axios.get(
         `https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems`
       );
-console.log("expire" , data)
-    
+
       setNewItems(data);
       setLoading(false);
     };
@@ -156,7 +155,7 @@ console.log("expire" , data)
                         </div>
                       </div>
 
-                      <Link to={`/item-details/${newItem.nftId}`}>
+                      <Link to={{ pathname: `/item-details/${newItem.nftId}`, state: newItem.nftId}} >
                         <img
                           src={newItem.nftImage}
                           className="lazy nft__item_preview"

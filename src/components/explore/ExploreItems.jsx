@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
 import NFTExpiration from "../home/NFTExpiration";
 
@@ -121,7 +119,7 @@ const ExploreItems = () => {
                       </div>
                     </div>
                   </div>
-                  <Link to="/item-details">
+                  <Link to={{ pathname: `/item-details/${exploreItem.nftId}`, state: exploreItem.nftId}}>
                     <img
                       src={exploreItem.nftImage}
                       className="lazy nft__item_preview"

@@ -17025,3 +17025,50 @@ width: 125px !important;
 background: lightgray !important;
 background-color: lightgray !important;
 }
+
+
+#item_info_h2___skeleton{
+height: 42px;
+width: 350px;
+  background: lightgray !important;
+  margin-bottom: 5px;
+}
+
+#item_info_p2___skeleton{
+  height: 70px;
+  width: 500px;
+
+    background: lightgray !important;
+  }
+
+  .item_info_views {
+    height: 30px;
+    width: 80px;
+
+  }
+
+  .item_info_like{
+    height: 30px;
+    width: 80px;
+    
+  }
+
+  .author_link_owner___skeleton {
+    height: 26px;
+    width: 80px;
+    background: lightgray;
+  }
+
+  .author_link_creator___skeleton {
+    height: 26px;
+    width: 80px;
+    background: lightgray;
+  }
+
+  .nft-item-price--skeleton{
+    height:26px;
+    width: 100px;
+    background: lightgray;
+  }
+  
+  
