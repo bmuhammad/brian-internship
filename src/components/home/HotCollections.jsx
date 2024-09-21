@@ -5,6 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+
 const HotCollections = () => {
   const [hotCollectoins, setHotCollections] = useState([]);
   const [loading, setLoading] = useState();
@@ -37,12 +38,11 @@ const HotCollections = () => {
   };
 
   async function getHotCollections() {
-    //console.log("get hot coll method hit");
     setLoading(true);
     const { data } = await axios.get(
       `https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections`
     );
-    //console.log("hot data", data);
+  
     setHotCollections(data);
     setLoading(false);
   }
@@ -52,6 +52,7 @@ const HotCollections = () => {
   }, []);
 
 
+  
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">

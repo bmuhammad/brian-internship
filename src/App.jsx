@@ -8,6 +8,18 @@ import Footer from "./components/Footer";
 import AuthorItems from "./components/author/AuthorItems";
 
 function App() {
+  
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+  });
+  
+  // Restore the scroll position after refresh
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('scrollPosition')) {
+      window.scrollTo(0, sessionStorage.getItem('scrollPosition'));
+      sessionStorage.removeItem('scrollPosition');
+    }
+  });
   return (
     <Router>
       <Nav />
