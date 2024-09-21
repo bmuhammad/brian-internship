@@ -44,6 +44,7 @@ body {
   padding: 0;
   line-height: 26px;
   word-spacing: 0px;
+  
 }
 
 .dark-scheme {
@@ -15600,6 +15601,7 @@ img {
   .container-md,
   .container-sm {
     min-width: 95%;
+    overflow-anchor: none;
   }
 }
 

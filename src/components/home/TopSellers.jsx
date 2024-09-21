@@ -22,6 +22,19 @@ const TopSellers = () => {
 
     fetchData();
   }, []);
+
+  window.addEventListener('beforeunload', () => {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+  });
+  
+  // Restore the scroll position after refresh
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('scrollPosition')) {
+      window.scrollTo(0, sessionStorage.getItem('scrollPosition'));
+      sessionStorage.removeItem('scrollPosition');
+    }
+  });
+
   return (
     <section id="section-popular" className="pb-5">
       <div className="container">
